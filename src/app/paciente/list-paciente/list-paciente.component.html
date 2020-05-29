@@ -1,0 +1,31 @@
+  <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+          <h1 class="h2">Pacientes</h1>
+          <button class="btn btn-success" (click)="agregarPaciente()">CREAR</button>
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+                 <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>TELEFONO</th>
+                <th>EPS</th>   
+                  <th>NOMBRE ACOMPAÑANTE</th>
+                <th>TELEFONO ACOMPAÑANTE</th>   
+                <th>OPCIONES</th>        
+      </tr>
+              </thead>
+              <tbody>
+               <tr *ngFor="let paciente of pacientes">
+        <td>{{paciente.id}}</td>
+        <td>{{paciente.nombre}}</td>
+        <td>{{paciente.telefono}}</td>
+        <td>{{paciente.eps}}</td>
+        <td>{{paciente.nombre_acom}}</td>
+        <td>{{paciente.telefono_acom}}</td>
+        <td><button class="btn btn-success" (click)="eliminar(paciente)"> ELIMINAR</button>
+          <button class="btn btn-success" (click)="editar(paciente)" style="margin-left: 20px;"> EDITAR</button></td>
+      </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>

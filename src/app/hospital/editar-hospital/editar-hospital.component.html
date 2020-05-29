@@ -1,0 +1,34 @@
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+                      <h1 class="h2">Editar Hospital</h1>
+
+    <div class="col-md-6 user-container">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" method="POST">
+      <div class="form-group">
+        <label for="username">Nombre :</label>
+        <input type="text" formControlName="nombre" placeholder="Nombre" name="nombre" class="form-control" id="nombre">
+      </div>
+      <div class="form-group">
+        <label for="text">Direccion:</label>
+        <input type="text" formControlName="direccion" placeholder="Direccion" name="direccion" class="form-control" id="direccion">
+      </div>
+   <div class="form-group">
+        <label for="text">Telefono:</label>
+        <input type="text" formControlName="telefono" placeholder="Telefono" name="telefono" class="form-control" id="telefono">
+      </div>
+<div class="form-group">
+        <label for="username">Nombre Representante:</label>
+        <input type="text" formControlName="nombre_representante" placeholder="Nombre Representante" name="nombre_representantet" class="form-control" id="nombre_representante">
+      </div>
+
+      <div class="form-group">
+        <label for="username">Nit: </label>
+        <input type="text" formControlName="nit" placeholder="NIT" name="nit" class="form-control" id="nit">
+      </div>
+      <button class="btn btn-success">Editar</button>
+      <button class="btn btn-danger" (click)="close()">Cancelar</button>
+    </form>
+  </div>
+
+
+        </main>
+  

@@ -1,0 +1,42 @@
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+                      <h1 class="h2">Registrar Paciente</h1>
+
+    <div class="col-md-6 user-container">
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()" method="POST">
+      <div class="form-group">
+        <label for="username">Nombre :</label>
+        <input type="text" formControlName="nombre" placeholder="Nombre" name="nombre" class="form-control" id="nombre">
+      </div>
+      <div class="form-group">
+        <label for="text">Direccion:</label>
+        <input type="text" formControlName="direccion" placeholder="Direccion" name="direccion" class="form-control" id="direccion">
+      </div>
+   <div class="form-group">
+        <label for="text">Telefono:</label>
+        <input type="text" formControlName="telefono" placeholder="Telefono" name="telefono" class="form-control" id="telefono">
+      </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">EPS</label>
+    <select formControlName="eps" name="eps" class="form-control" id="eps">
+     <option *ngFor="let o of options">
+        {{o.name}}
+     </option>
+  </select>
+  </div>
+<div class="form-group">
+        <label for="username">Nombre Acompañante:</label>
+        <input type="text" formControlName="nombre_acom" placeholder="Nombre Acompañante" name="nombre_acom" class="form-control" id="nombre_acom">
+      </div>
+
+      <div class="form-group">
+        <label for="username">Telefono Acompañante:</label>
+        <input type="text" formControlName="telefono_acom" placeholder="Telefono Acompañante" name="telefono_acom" class="form-control" id="telefono_acom">
+      </div>
+      <button class="btn btn-success">Agregar</button>
+      <button class="btn btn-danger" (click)="close()">Cancelar</button>
+    </form>
+  </div>
+
+
+        </main>
+  

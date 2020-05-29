@@ -1,0 +1,31 @@
+  <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+          <h1 class="h2">Hospitales</h1>
+          <button class="btn btn-success" (click)="agregarPaciente()">CREAR</button>
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+                 <tr>
+                <th>ID</th>
+                <th>NIT</th>
+                <th>NOMBRE </th>   
+                 <th>NOMBRE REPRESENTANTE </th>
+                <th>DIRECCION</th>
+               <th>TELEFONO</th>
+                <th>OPCIONES</th>        
+      </tr>
+              </thead>
+              <tbody>
+               <tr *ngFor="let hospital of hospitales">
+        <td>{{hospital.id}}</td>
+        <td>{{hospital.nit}}</td>
+        <td>{{hospital.nombre}}</td>
+        <td>{{hospital.nombre_representante}}</td>
+        <td>{{hospital.telefono}}</td>
+        <td>{{hospital.direccion}}</td>
+        <td><button class="btn btn-success" (click)="eliminar(hospital)"> ELIMINAR</button>
+          <button class="btn btn-success" (click)="editar(hospital)" style="margin-left: 20px;"> EDITAR</button></td>
+      </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
